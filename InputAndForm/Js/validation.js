@@ -38,3 +38,17 @@ Email.addEventListener('input',function()
   }
 })
 
+var PhoneNumber = document.querySelector("#number")
+var PhoneNumberError = document.querySelector(".error-number")
+PhoneNumber.addEventListener('input',function()
+{
+pnumber = RegExp("^[0-9]{1,2}[ ][0-9]{10}$");
+if ( pnumber.test(PhoneNumber.value)) {
+PhoneNumberError.textContent=""
+}
+else
+{
+PhoneNumberError.textContent="Invalid PhoneNumber"
+}
+}
+)
